@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    image: ${IMAGE_NAME}
+    container_name: ${CONTAINER_NAME}
+
+    build:
+      context: "."
+      dockerfile: ${DOCKERFILE_PATH}
+
+    environment:
+      CONFIG_PATH: ${CONFIG_PATH:-config/production.yaml}
+
+    volumes:
+      - ".:/app"
+
+    ports:
+      - "14200:14200"
+
+    restart: "unless-stopped"

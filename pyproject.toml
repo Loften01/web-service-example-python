@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "web-service-example-python"
+version = "0.1.0"
+description = "Template for a Python web service"
+authors = ["Rosa Serai <loften@tutanota.de>"]
+license = "Apache License 2.0"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ruff = "^0.9.6"
+mypy = "^1.15.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
